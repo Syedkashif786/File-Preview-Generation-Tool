@@ -51,12 +51,7 @@ const Header = () => {
         </ul>
         {/* Left links */}
         <div className="d-flex align-items-center">
-          <button type="button" className="btn btn-link px-3 me-2">
-            Login
-          </button>
-          <button type="button" className="btn btn-primary me-3">
-            Sign up for free
-          </button>
+        
           <a
             className="btn btn-dark px-3"
             href="https://github.com/mdbootstrap/mdb-ui-kit"
