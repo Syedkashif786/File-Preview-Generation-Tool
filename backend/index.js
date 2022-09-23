@@ -25,6 +25,8 @@ app.get( '/home', (req, res) => {
     res.send('Response from home');
 })
 
+app.use(express.static('./static'))
+
 app.listen( port, () => {
     console.log('server has started');
 });
