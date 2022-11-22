@@ -13,20 +13,15 @@ var previews = new FilePreviews({
 })
 
 const genFilePreview = (url, cb) => {
-  console.log("alsdkjflsdafj")
-  url = url.replace(/\s/g, "%20");
   console.log(url);
   previews.generate(url, function (err, result) {
-    console.log("here")
-    // console.lo g(err)
+    // console.log(err)
     // console.log(result.id)
     // console.log(result.status)
     // return result.id;
     if(result){
-      console.log("result")
       cb(result.id)
     }else{
-      console.log("error")
       cb("");
     }
   })
@@ -35,9 +30,8 @@ const genFilePreview = (url, cb) => {
 const retrieveFilePreview = (id, cb) => {
   previews.retrieve(id, function (err, result) {
     console.log(result)
-    console.log(result.preview)
     if(id){
-      cb(result.url);
+      cb(result.preview.url);
     }else{
       cb("");
     }
@@ -145,7 +139,6 @@ const generateVidPreview2 = (url) => {
  })
 
  router.get("/ret-doc-preview/:id", (req, res) => {
-  console.log("abc def " + req.params.id)
   retrieveFilePreview(req.params.id, (url) => {
     console.log(url);
     res.status(200).redirect(url);
