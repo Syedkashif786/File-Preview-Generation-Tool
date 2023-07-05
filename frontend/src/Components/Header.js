@@ -9,11 +9,11 @@ const Header = () => {
     {/* Container wrapper */}
     <div className="container">
       {/* Navbar brand */}
-      <a className="navbar-brand me-2" href="https://mdbgo.com/">
+      <a className="navbar-brand me-2" href="/">
         <img
-          src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-          height={16}
-          alt="MDB Logo"
+          src="favicon.jpeg"
+          height={32}
+          alt="Logo"
           loading="lazy"
           style={{ marginTop: "-1px" }}
         />
@@ -55,7 +55,7 @@ const Header = () => {
         
           <a
             className="btn btn-dark px-3"
-            href="https://github.com/mdbootstrap/mdb-ui-kit"
+            href="https://github.com/Syedkashif786"
             role="button"
           >
             <i className="fab fa-github" />
